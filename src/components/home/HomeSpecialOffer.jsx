@@ -64,7 +64,7 @@ function HomeSpecialOffer() {
     const swiperRef = useRef();
 
     return (
-        <section className="content-inner-2" style={{ height: "fit-content" }}>
+        <section className="content-inner-1" style={{ height: "fit-content" }}>
             <div className="container">
                 <div className="section-head book-align">
                     <h2 className="title mb-0">Special Offers</h2>

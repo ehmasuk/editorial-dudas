@@ -68,7 +68,8 @@ function HomeHero() {
                                         <div className="banner-media">
                                             <img src="https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/banner-media2.png" alt="banner-media" />
                                         </div>
-                                        <img className="pattern" src="images/Group.png" alt="dots" />
+                                        {/* <i className="fas fa-circle pattern"></i> */}
+                                        {/* <img className="pattern" src="images/Group.png" alt="dots" /> */}
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +126,8 @@ function HomeHero() {
                                         <div className="banner-media">
                                             <img src="https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/banner-media.png" alt="banner-media1" />
                                         </div>
-                                        <img className="pattern" src="images/Group.png" alt="dots" />
+                                        {/* <i className="fas fa-circle pattern"></i> */}
+                                        {/* <img className="pattern" src="images/Group.png" alt="dots" /> */}
                                     </div>
                                 </div>
                             </div>

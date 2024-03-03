@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 
+import { IoSearch } from "react-icons/io5";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -32,18 +33,18 @@ function Header() {
             <div className="header-info-bar">
                 <div className="container clearfix">
                     <div className="logo-header logo-dark">
-                        <a href="index.html">
-                            <img src="https://picsum.photos/500/300?random=1" alt="logo" />
-                        </a>
+                        <Link to="/">
+                            <img src="https://img.logoipsum.com/288.svg" alt="logo" />
+                        </Link>
                     </div>
                     <div className="extra-nav">
                         <div className="extra-cell">
                             <ul className="navbar-nav header-right">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="wishlist.html">
+                                    <Link className="nav-link" to="/wishlist">
                                         <FaRegHeart color="#000" />
                                         <span className="badge">21</span>
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item" onClick={(e) => e.stopPropagation()}>
                                     <button type="button" className="nav-link box cart-btn" onClick={() => setCartisOpen(!cartisOpen)}>
@@ -58,7 +59,7 @@ function Header() {
                                                 initial={{ height: 0 }}
                                                 animate={{ height: "auto" }}
                                                 transition={{
-                                                    duration: 0.3,
+                                                    duration: 0.2,
                                                 }}
                                                 exit={{ height: 0 }}
                                                 className="dropdown-menu cart-list d-block"
@@ -67,7 +68,7 @@ function Header() {
                                                     <div className="media">
                                                         <div className="media-left">
                                                             <a href="books-detail.html">
-                                                                <img alt="" className="media-object" src="https://picsum.photos/500/300?random=1" />
+                                                                <img alt="" className="media-object" src="https://i.pravatar.cc/150" />
                                                             </a>
                                                         </div>
                                                         <div className="media-body">
@@ -132,58 +133,60 @@ function Header() {
                                         )}
                                     </AnimatePresence>
                                 </li>
-                                <li className="nav-item dropdown profile-dropdown ms-4">
-                                    <div className="nav-link" role="button" onClick={handleShowProfileDrop}>
-                                        <img src="https://picsum.photos/500/300?random=1" alt="/" />
-                                        <div className="profile-info">
-                                            <h6 className="title">Brian</h6>
-                                            <span>info@gmail.com</span>
+                                {isLogedin && (
+                                    <li className="nav-item dropdown profile-dropdown ms-4">
+                                        <div className="nav-link" role="button" onClick={handleShowProfileDrop}>
+                                            <img src="https://i.pravatar.cc/150" alt="/" />
+                                            <div className="profile-info">
+                                                <h6 className="title">Brian</h6>
+                                                <span>info@gmail.com</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <AnimatePresence>
-                                        {profileDropisOpen && (
-                                            <motion.div
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: 1 }}
-                                                transition={{ duration: 0.3 }}
-                                                exit={{ scale: 0 }}
-                                                style={{ transformOrigin: "top" }}
-                                                className="dropdown-menu py-0 dropdown-menu-end d-block"
-                                            >
-                                                <div className="dropdown-header">
-                                                    <h6 className="m-0">Brian</h6>
-                                                    <span>info@gmail.com</span>
-                                                </div>
-                                                <div className="dropdown-body d-block">
-                                                    <a href="my-profile.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
-                                                        <div>
-                                                            <FaRegUser fontSize="18px" />
-
-                                                            <span className="ms-2">Profile</span>
-                                                        </div>
-                                                    </a>
-                                                    <a href="shop-cart.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
-                                                        <div>
-                                                            <RiShoppingCartLine fontSize="18px" />
-                                                            <span className="ms-2">My Order</span>
-                                                        </div>
-                                                    </a>
-                                                    <a href="wishlist.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
-                                                        <div>
-                                                            <FaRegHeart fontSize="18px" />
-                                                            <span className="ms-2">Wishlist</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div className="dropdown-footer">
-                                                    <div onClick={() => dispatch(authUnCheck())} className="btn btn-primary w-100 btnhover btn-sm">
-                                                        Log Out
+                                        <AnimatePresence>
+                                            {profileDropisOpen && (
+                                                <motion.div
+                                                    initial={{ scale: 0 }}
+                                                    animate={{ scale: 1 }}
+                                                    transition={{ duration: 0.2 }}
+                                                    exit={{ scale: 0 }}
+                                                    style={{ transformOrigin: "top" }}
+                                                    className="dropdown-menu py-0 dropdown-menu-end d-block"
+                                                >
+                                                    <div className="dropdown-header">
+                                                        <h6 className="m-0">Brian</h6>
+                                                        <span>info@gmail.com</span>
                                                     </div>
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </li>
+                                                    <div className="dropdown-body d-block">
+                                                        <a href="my-profile.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+                                                            <div>
+                                                                <FaRegUser fontSize="18px" />
+
+                                                                <span className="ms-2">Profile</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="shop-cart.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+                                                            <div>
+                                                                <RiShoppingCartLine fontSize="18px" />
+                                                                <span className="ms-2">My Order</span>
+                                                            </div>
+                                                        </a>
+                                                        <a href="wishlist.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+                                                            <div>
+                                                                <FaRegHeart fontSize="18px" />
+                                                                <span className="ms-2">Wishlist</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div className="dropdown-footer">
+                                                        <div onClick={() => dispatch(authUnCheck())} className="btn btn-primary w-100 btnhover btn-sm">
+                                                            Log Out
+                                                        </div>
+                                                    </div>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -191,7 +194,7 @@ function Header() {
                     <div className="header-search-nav">
                         <div className="header-item-search">
                             <div className="input-group search-input">
-                                <select className="default-select">
+                                <select className="default-select header-category-select">
                                     <option>Category</option>
                                     <option>Photography </option>
                                     <option>Arts</option>
@@ -209,7 +212,7 @@ function Header() {
                                 </select>
                                 <input type="text" className="form-control" aria-label="Text input with dropdown button" placeholder="Search Books Here" />
                                 <button className="btn" type="button">
-                                    <i className="flaticon-loupe" />
+                                    <IoSearch />
                                 </button>
                             </div>
                         </div>
@@ -223,9 +226,9 @@ function Header() {
                     <div className="container clearfix">
                         {/* Website Logo */}
                         <div className="logo-header logo-dark">
-                            <a href="index.html">
+                            <Link to="/">
                                 <img src="https://picsum.photos/500/300?random=1" alt="logo" />
-                            </a>
+                            </Link>
                         </div>
                         {/* Nav Toggle Button */}
                         <button
@@ -244,9 +247,15 @@ function Header() {
                         {/* EXTRA NAV */}
                         <div className="extra-nav">
                             <div className="extra-cell">
-                                <a href="contact-us.html" className="btn btn-primary btnhover">
-                                    Get In Touch
-                                </a>
+                                {!isLogedin ? (
+                                    <Link to="/login" className="btn btn-primary btnhover">
+                                        Login
+                                    </Link>
+                                ) : (
+                                    <Link to="/profile" className="btn btn-primary btnhover">
+                                        Profile
+                                    </Link>
+                                )}
                             </div>
                         </div>
                         {/* Main Nav */}
@@ -265,32 +274,17 @@ function Header() {
                                 </div>
                             </div>
                             <ul className="nav navbar-nav">
-                                <li className="sub-menu-down">
-                                    <a href="#">
+                                <li>
+                                    <Link to="/">
                                         <span>Home</span>
-                                    </a>
-                                    <ul className="sub-menu">
-                                        <li>
-                                            <a href="index.html">Home 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="index-2.html">Home 2</a>
-                                        </li>
-                                    </ul>
+                                    </Link>
                                 </li>
                                 {!isLogedin && (
-                                    <>
-                                        <li>
-                                            <Link to="/login">
-                                                <span>Login</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/register">
-                                                <span>Register</span>
-                                            </Link>
-                                        </li>
-                                    </>
+                                    <li>
+                                        <Link to="/register">
+                                            <span>Register</span>
+                                        </Link>
+                                    </li>
                                 )}
 
                                 <li className="sub-menu-down">
