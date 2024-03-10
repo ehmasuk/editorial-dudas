@@ -15742,6 +15742,8 @@ section {
 .main-slider .main-swiper-thumb .books-card .dz-content .book-footer {
     display: flex;
     justify-content: space-between;
+    align-items:center;
+    margin-top:10px
 }
 .main-slider .main-swiper-thumb .books-card .dz-content .book-footer .price .price-num {
     font-family: var(--font-family-title);
@@ -29053,7 +29055,7 @@ pre {
     justify-content: space-between;
 }
 .filter-area .grid-area .nav .nav-item {
-    align-item: center;
+    align-items: center;
 }
 .filter-area .grid-area .nav .nav-item .nav-link {
     color: var(--secondary);

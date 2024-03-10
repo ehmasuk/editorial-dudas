@@ -49,7 +49,6 @@ function Header() {
                                 <li className="nav-item" onClick={(e) => e.stopPropagation()}>
                                     <button type="button" className="nav-link box cart-btn" onClick={() => setCartisOpen(!cartisOpen)}>
                                         <RiShoppingCartLine color="#000" />
-
                                         <span className="badge">5</span>
                                     </button>
                                     <AnimatePresence>
@@ -68,7 +67,7 @@ function Header() {
                                                     <div className="media">
                                                         <div className="media-left">
                                                             <a href="books-detail.html">
-                                                                <img alt="" className="media-object" src="https://i.pravatar.cc/150" />
+                                                                <img alt="" className="media-object" src="https://picsum.photos/500/300?random=1" />
                                                             </a>
                                                         </div>
                                                         <div className="media-body">
@@ -136,7 +135,7 @@ function Header() {
                                 {isLogedin && (
                                     <li className="nav-item dropdown profile-dropdown ms-4">
                                         <div className="nav-link" role="button" onClick={handleShowProfileDrop}>
-                                            <img src="https://i.pravatar.cc/150" alt="/" />
+                                            <img src="https://i.pravatar.cc/150?img=12" alt="/" />
                                             <div className="profile-info">
                                                 <h6 className="title">Brian</h6>
                                                 <span>info@gmail.com</span>
@@ -157,25 +156,24 @@ function Header() {
                                                         <span>info@gmail.com</span>
                                                     </div>
                                                     <div className="dropdown-body d-block">
-                                                        <a href="my-profile.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+                                                        <Link to="/user/profile" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
                                                             <div>
                                                                 <FaRegUser fontSize="18px" />
-
                                                                 <span className="ms-2">Profile</span>
                                                             </div>
-                                                        </a>
-                                                        <a href="shop-cart.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+                                                        </Link>
+                                                        <Link to="/user/cart" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
                                                             <div>
                                                                 <RiShoppingCartLine fontSize="18px" />
                                                                 <span className="ms-2">My Order</span>
                                                             </div>
-                                                        </a>
-                                                        <a href="wishlist.html" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
+                                                        </Link>
+                                                        <Link href="/user/wishlist" className="dropdown-item d-flex justify-content-between align-items-center ai-icon">
                                                             <div>
                                                                 <FaRegHeart fontSize="18px" />
                                                                 <span className="ms-2">Wishlist</span>
                                                             </div>
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="dropdown-footer">
                                                         <div onClick={() => dispatch(authUnCheck())} className="btn btn-primary w-100 btnhover btn-sm">
@@ -204,7 +202,7 @@ function Header() {
                                     <option>Movies</option>
                                     <option>Comics</option>
                                     <option>Biographies</option>
-                                    <option>Children’s Books</option>
+                                    <option>Childrens Books</option>
                                     <option>Historical</option>
                                     <option>Contemporary</option>
                                     <option>Classics</option>
@@ -252,7 +250,7 @@ function Header() {
                                         Login
                                     </Link>
                                 ) : (
-                                    <Link to="/profile" className="btn btn-primary btnhover">
+                                    <Link to="/user/profile" className="btn btn-primary btnhover">
                                         Profile
                                     </Link>
                                 )}
@@ -293,13 +291,13 @@ function Header() {
                                     </a>
                                     <ul className="sub-menu">
                                         <li>
-                                            <a href="my-profile.html">My Profile</a>
+                                            <Link to="/user/profile">My Profile</Link>
                                         </li>
                                         <li>
                                             <a href="services.html">Services</a>
                                         </li>
                                         <li>
-                                            <a href="faq.html">FAQ's</a>
+                                            <a href="faq.html">FAQ</a>
                                         </li>
                                         <li>
                                             <a href="help-desk.html">Help Desk</a>
@@ -315,9 +313,6 @@ function Header() {
                                         </li>
                                         <li>
                                             <a href="under-construction.html">Under Construction</a>
-                                        </li>
-                                        <li>
-                                            <a href="error-404.html">Error 404</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -378,24 +373,24 @@ function Header() {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="contact-us.html">
+                                    <Link to="/contact">
                                         <span>Contact Us</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                             <div className="dz-social-icon">
                                 <ul>
                                     <li>
-                                        <a className="fab fa-facebook-f" target="_blank" href="https://www.facebook.com/dexignzone" rel="noreferrer" />
+                                        <a className="fab fa-facebook-f" target="_blank" href="#" rel="noreferrer" />
                                     </li>
                                     <li>
-                                        <a className="fab fa-twitter" target="_blank" href="https://twitter.com/dexignzones" rel="noreferrer" />
+                                        <a className="fab fa-twitter" target="_blank" href="#" rel="noreferrer" />
                                     </li>
                                     <li>
-                                        <a className="fab fa-linkedin-in" target="_blank" href="https://www.linkedin.com/showcase/3686700/admin/" rel="noreferrer" />
+                                        <a className="fab fa-linkedin-in" target="_blank" href="#" rel="noreferrer" />
                                     </li>
                                     <li>
-                                        <a className="fab fa-instagram" target="_blank" href="https://www.instagram.com/website_templates__/" rel="noreferrer" />
+                                        <a className="fab fa-instagram" target="_blank" href="#" rel="noreferrer" />
                                     </li>
                                 </ul>
                             </div>

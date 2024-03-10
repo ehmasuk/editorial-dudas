@@ -2,8 +2,7 @@ import { Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { FaRegStar, FaStar } from "react-icons/fa6";
-import Rating from "react-rating";
+import { Rate } from "antd";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -47,7 +46,7 @@ function HomeTestimonial() {
                         <SwiperSlide>
                             <div className="testimonial-1 overflow-hidden">
                                 <div className="testimonial-info">
-                                    <Rating initialRating={4} readonly emptySymbol={<FaRegStar color="#FFA808" />} fullSymbol={<FaStar color="#FFA808" />} />
+                                    <Rate disabled defaultValue={4} allowHalf />
                                     <div className="testimonial-text">
                                         <p>Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
                                     </div>
@@ -66,7 +65,7 @@ function HomeTestimonial() {
                         <SwiperSlide>
                             <div className="testimonial-1 overflow-hidden">
                                 <div className="testimonial-info">
-                                    <Rating initialRating={4} readonly emptySymbol={<FaRegStar color="#FFA808" />} fullSymbol={<FaStar color="#FFA808" />} />
+                                    <Rate disabled defaultValue={4} allowHalf />
                                     <div className="testimonial-text">
                                         <p>Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
                                     </div>
@@ -85,7 +84,7 @@ function HomeTestimonial() {
                         <SwiperSlide>
                             <div className="testimonial-1 overflow-hidden">
                                 <div className="testimonial-info">
-                                    <Rating initialRating={4} readonly emptySymbol={<FaRegStar color="#FFA808" />} fullSymbol={<FaStar color="#FFA808" />} />
+                                    <Rate disabled defaultValue={4} allowHalf />
                                     <div className="testimonial-text">
                                         <p>Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
                                     </div>
@@ -104,7 +103,7 @@ function HomeTestimonial() {
                         <SwiperSlide>
                             <div className="testimonial-1 overflow-hidden">
                                 <div className="testimonial-info">
-                                    <Rating initialRating={4} readonly emptySymbol={<FaRegStar color="#FFA808" />} fullSymbol={<FaStar color="#FFA808" />} />
+                                    <Rate disabled defaultValue={4} allowHalf />
                                     <div className="testimonial-text">
                                         <p>Very impresive store. Your book made studying for the ABC certification exams a breeze. Thank you very much</p>
                                     </div>

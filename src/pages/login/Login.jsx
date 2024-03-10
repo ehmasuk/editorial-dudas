@@ -30,13 +30,13 @@ function Login() {
         try {
             const res = await axios.post("https://reqres.in/api/login", { ...info, userId: crypto.randomUUID() });
             console.log(res);
-            localStorage.setItem('isLogedin',JSON.stringify(res))
+            localStorage.setItem("isLogedin", JSON.stringify(res));
             reset();
             dispatch(authCheck());
             navigate("/");
         } catch (error) {
             console.log(error.message);
-            localStorage.removeItem('isLogedin')
+            localStorage.removeItem("isLogedin");
         } finally {
             setLoginisLoading(false);
         }
@@ -133,7 +133,7 @@ function Login() {
                                             </AnimatePresence>
                                         </div>
                                         <div className="text-left">
-                                            <button disabled={loginisLoading} className='btn btn-primary btnhover me-2'>
+                                            <button disabled={loginisLoading} className="btn btn-primary btnhover me-2">
                                                 <span>Login</span>
                                                 {loginisLoading && <i className="fas fa-spinner fa-spin m-l10"></i>}
                                             </button>

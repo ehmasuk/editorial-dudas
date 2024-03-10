@@ -391,7 +391,6 @@ function Home() {
                         </div>
                     </div>
                 </section>
-                {/* Newsletter End */}
             </div>
         </Base>
     );

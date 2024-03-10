@@ -4,6 +4,11 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import booCover from "../../assets/images/bookcover.jpg";
 import backWire from "../../assets/images/waveelement.png";
+
+import media1 from "../../assets/images/banner-media2.png";
+import media2 from "../../assets/images/banner-media.png";
+import { Rate } from "antd";
+
 function HomeHero() {
     return (
         <div className="main-slider style-1">
@@ -11,7 +16,7 @@ function HomeHero() {
                 modules={[EffectFade, Autoplay]}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 3500,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 speed={1500}
@@ -66,7 +71,7 @@ function HomeHero() {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="banner-media">
-                                            <img src="https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/banner-media2.png" alt="banner-media" />
+                                            <img src={media1} alt="banner-media" />
                                         </div>
                                         {/* <i className="fas fa-circle pattern"></i> */}
                                         {/* <img className="pattern" src="images/Group.png" alt="dots" /> */}
@@ -124,7 +129,7 @@ function HomeHero() {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="banner-media">
-                                            <img src="https://bookland.wprdx.com/demo/wp-content/uploads/2022/09/banner-media.png" alt="banner-media1" />
+                                            <img src={media2} alt="banner-media1" />
                                         </div>
                                         {/* <i className="fas fa-circle pattern"></i> */}
                                         {/* <img className="pattern" src="images/Group.png" alt="dots" /> */}
@@ -169,13 +174,7 @@ function HomeHero() {
                                     <div className="price">
                                         <span className="price-num">$9.5</span>
                                     </div>
-                                    <div className="rate">
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                    </div>
+                                    <Rate disabled allowHalf defaultValue={4.5} style={{color : '#FFA808',fontSize : '14px',marginRight:'20px'}} />
                                 </div>
                             </div>
                         </div>
@@ -196,13 +195,7 @@ function HomeHero() {
                                     <div className="price">
                                         <span className="price-num">$9.5</span>
                                     </div>
-                                    <div className="rate">
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                    </div>
+                                    <Rate disabled allowHalf defaultValue={4.5} style={{color : '#FFA808',fontSize : '14px'}} />
                                 </div>
                             </div>
                         </div>
@@ -223,13 +216,7 @@ function HomeHero() {
                                     <div className="price">
                                         <span className="price-num">$9.5</span>
                                     </div>
-                                    <div className="rate">
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                    </div>
+                                    <Rate disabled allowHalf defaultValue={4.5} style={{color : '#FFA808',fontSize : '14px'}} />
                                 </div>
                             </div>
                         </div>
@@ -250,13 +237,7 @@ function HomeHero() {
                                     <div className="price">
                                         <span className="price-num">$9.5</span>
                                     </div>
-                                    <div className="rate">
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                        <i className="flaticon-star text-yellow" />
-                                    </div>
+                                    <Rate disabled allowHalf defaultValue={4.5} style={{color : '#FFA808',fontSize : '14px'}} />
                                 </div>
                             </div>
                         </div>
